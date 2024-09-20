@@ -67,7 +67,7 @@ print(computer[9:-1:3])
 # Extracting Sub-Strings Practice #3
 # Reverses the position of all the characters in the following sentence and displays the result on the screen.
 beer = "It's great to work with computers. They don't argue, they remember everything and they don't drink your beer"
-print(beer[-1:0])
+print(beer[::-1])
 
 ##################################### String Methods#################################
 # String Methods Practice #1
@@ -89,6 +89,53 @@ print(beer[-1:0])
 # and display the sentence with both words modified.
 
 #################################string properties################################
+#uppercase method in python
+sentence = "Especially in electronic communication, writing in all cops is equiuvalent to yelling."
+print(sentence.upper()) #prints the sentence in uppercase
+#lowercase method in python
+sentence2 = "ESPN IS THE BEST SPORTS NETWORK"
+print(sentence2.lower()) #prints the sentence in lowercase
+print(sentence.find("communication")) #prints the index of the word communication
+#uppercase the word "coomunications" in the sentece
+# use the silcing method
+print(sentence[25:38].upper()) #prints thw rod communcations in uppercase
+print(sentence.replace("communication", "COMMUNICATION")) #prints the word communcations in upper case
+#or can use the upper method
+print(sentence.replace("communication", "communication".upper()))
+#prints the word communication in upper case
+new_sentence = "if the implemenation is hard to explain, it might be a bad idea."
+#replace the word hard with easy and bad with good
+modified_sentence = new_sentence.replace("hard", "easy").replace("bad", "good")
+print(modified_sentence)
+
+#join method
+word_list = ["Simple","is","better","than","complex."]
+print(word_list)
+joined_sentence = " ".join(word_list)
+print(joined_sentence)
+new_word_list = ["apple", "banana", "mango", "cherry", "watermelon"]
+joined_sentence2 = "🤣".join(new_word_list)
+print(joined_sentence2)
+#split method
+sentence4 = "I am a python programmer"
+print(sentence4.split()) #splits the sentence into a list of words
+#this prints out as ['I', 'am', 'a', 'python', 'programmer']
+#by default, this method splits the sentence by commas
+print(sentence4.split(",")) #splits the sentence into a list of words using seperator
+#this prints out as ['I am a python progammer']
+print(sentence4.split("a")) #splits the sentence into a list of words use separator
+
+#concatentaion words in python repetitoin 15 times
+result = "Repetition " * 15
+print(result)
+
+#find the first paragraph in the declaration of independece
+#place it in a variable called first_paragraph
+#replace the word "people" with "citizens" in the first paragraph
+#print the first paragraph with the word people replaced with citizens
+#remove all the spaces, replace the commas with emojis
+first_paragraph = "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America."
+print(first_paragraph.replace("People", "Citizens").replace(" ", "").replace(",", "🎶"))
 
 # String Properties Practice #1
 # Concatenate the text "Repetition" 15 times and display the result on the screen.
